@@ -12,10 +12,15 @@ class Employee:
     def fullname(self):
         return '{} {}'. format(self.first, self.last)
 
+    @fullname.setter
+    def fullname(self, name):
+        self.first, self.last = name.split(' ')
 
 emp_1 = Employee('John', 'Smith')
 
-emp_1.first = 'Jim'
+# emp_1.first = 'Jim'
+
+emp_1.fullname = 'Justin foley'
 
 print(emp_1.first)
 print(emp_1.last)
