@@ -65,18 +65,10 @@ dev_2 = Developer('David', 'John', 60000, 'C')
 
 mgr_1 = Manager("Lin", "Yung", 100000, [dev_1])
 
-print(mgr_1.email)
-mgr_1.add_emp(dev_2)
-mgr_1.remove_emp(dev_1)
-mgr_1.print_emps()
+print(isinstance(mgr_1, Manager))
+print(isinstance(mgr_1, Employee))
+print(isinstance(mgr_1, Developer))
 
-
-# print(help(Developer))
-
-# print(dev_1.email)
-# print(dev_1.prog_lang)
-# print(dev_2.email)
-
-# print(dev_1.pay)
-# dev_1.apply_raise()
-# print(dev_1.pay)
+print(issubclass(Developer, Employee))
+print(issubclass(Manager, Employee))
+print(issubclass(Manager, Developer))
