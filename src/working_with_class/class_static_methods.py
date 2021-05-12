@@ -32,8 +32,18 @@ class Employee:
         return True
 
 
-import datetime
-my_date = datetime.date.today()
-print(my_date)
-print(type(my_date))
-print(Employee.is_workday(my_date))
+class Developer(Employee):
+    raise_amt = 1.10
+
+
+dev_1 = Developer('Jane', 'Doe', 50000)
+dev_2 = Developer('David', 'John', 60000)
+
+# print(help(Developer))
+
+# print(dev_1.email)
+# print(dev_2.email)
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
