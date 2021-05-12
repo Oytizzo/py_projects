@@ -20,14 +20,20 @@ class Employee:
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
 
-
-emp_1 = Employee('David' , 'John', 50000)
-emp_2 = Employee('Jane', 'Doe', 60000)
-
-# same as Employee.raise_amt = 1.05
-Employee.set_raise_amt(1.05)
+    @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
 
 
-print(Employee.raise_amt)
-print(emp_1.raise_amt)
-print(emp_2.raise_amt)
+emp_str_1 = 'Justin-foley-50000'
+emp_str_2 = 'David-John-60000'
+
+new_emp_1 = Employee.from_string(emp_str_1)
+new_emp_2 = Employee.from_string(emp_str_2)
+
+print(new_emp_1.email)
+print(new_emp_1.pay)
+
+print(new_emp_2.email)
+print(new_emp_2.pay)
