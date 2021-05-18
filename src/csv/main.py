@@ -8,7 +8,7 @@ book_3 = ["Learn Programming with Python", "Tamim Shahriar Subeen", "Dimik Proka
 
 book_list = [book_1, book_2, book_3]
 
-with open("csv/book_test_1.csv", "w") as csvf:
+with open("csv/book_test_2.csv", "w", newline='') as csvf:
     csv_writer = csv.writer(csvf, delimiter=',', quotechar="\"", quoting=csv.QUOTE_MINIMAL)
     csv_writer.writerow(field_names)
     for book in book_list:
