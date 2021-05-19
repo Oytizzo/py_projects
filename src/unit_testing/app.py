@@ -7,10 +7,7 @@ def average(L):
 
 if __name__ == "__main__":
     L = [1, 2, 3, 4, 5]
-    expected_result = 3.0
-    result = average(L)
-
-    if expected_result == result:
-        print("test passed")
-    else:
-        print("test failed!", "recieved:", result, "expected:", expected_result)
+    # expected_result = 3.0
+    expected_result = 4.0
+    
+    assert expected_result == average(L), "average() produced incorrect result"
