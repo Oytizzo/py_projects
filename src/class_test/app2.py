@@ -1,12 +1,19 @@
 class Animal:
     def __init__(self) -> None:
+        print("Animal Constructor")
         self.age = 1
 
     def eat(self):
         print("eat")
 
 
-class Mammal(Animal):    
+class Mammal(Animal):
+    def __init__(self) -> None:
+        # super().__init__()
+        print("Mammal Constructor")
+        self.weight = 2
+        super().__init__()
+
     def walk(self):
         print("walk")
 
@@ -18,13 +25,5 @@ class Fish(Animal):
 
 # type m.    and see the magic
 m = Mammal()
-
-print(isinstance(m, Mammal))
-print(isinstance(m, Animal))
-print(isinstance(m, object))
-
-# type o.    and see the magic
-o = object()
-
-print(issubclass(Mammal, Animal))
-print(issubclass(Animal, object))
+print(m.age)
+print(m.weight)
