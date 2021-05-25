@@ -16,6 +16,15 @@ class Fish(Animal):
         print("swim")
 
 
+# type m.    and see the magic
 m = Mammal()
-m.eat()
-print(m.age)
+
+print(isinstance(m, Mammal))
+print(isinstance(m, Animal))
+print(isinstance(m, object))
+
+# type o.    and see the magic
+o = object()
+
+print(issubclass(Mammal, Animal))
+print(issubclass(Animal, object))
