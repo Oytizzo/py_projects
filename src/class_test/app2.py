@@ -1,17 +1,30 @@
-class Animal:
-    def eat(self):
-        print("eat")
+# class Employee:
+#     def greet(self):
+#         print("Employee Greet")
 
 
-class Bird(Animal):
+# class Person:
+#     def greet(self):
+#         print("Person Greet")
+
+
+# class Manager(Employee, Person):
+#     pass
+
+# m = Manager()
+# m.greet()
+
+
+class Flyer:
     def fly(self):
-        print("fly")
+        pass
 
 
-class Chicken(Bird):
+class Swimmer:
+    def swim(self):
+        pass
+
+
+# Multiple inheritance should not conflict on same functions
+class FlyingFish(Flyer, Swimmer):
     pass
-
-c = Chicken()
-# chicken cannot fly
-c.fly()
-c.eat()
