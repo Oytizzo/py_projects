@@ -1,0 +1,16 @@
+from pathlib import Path
+
+print(Path.home())
+path = Path(r"py_std_lib\app_for_path.py")
+print(path.exists())
+path.is_file()
+path.is_dir()
+print(path.name)
+print(path.stem)
+print(path.suffix)
+print(path.parent)
+path = path.with_name("file.txt")
+print(path)
+print(path.absolute())
+path = path.with_suffix(".txt")
+print(path)
