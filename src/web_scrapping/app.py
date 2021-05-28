@@ -8,6 +8,5 @@ soup = BeautifulSoup(response.text, "html.parser")
 
 questions = soup.select(".question-summary")
 
-print(type(questions[0]))
-print(type(questions[0].attrs))
-print(questions[0].attrs)
+for question in questions:
+    print(question.select_one(".question-hyperlink").getText())
