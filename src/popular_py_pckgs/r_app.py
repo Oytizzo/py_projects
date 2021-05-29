@@ -1,11 +1,11 @@
 import requests
 
-payload = {'page': 2, 'count': 25}
-url = "https://httpbin.org/get"
+payload = {'username': 'david', 'password': 'testing123'}
+url = "https://httpbin.org/post"
 
-r = requests.get(url, params=payload)
+r = requests.post(url, data=payload)
 
 print(r.status_code)
 print(r.ok)
 print(r.headers)
-print(r.url)
+print(r.text)
