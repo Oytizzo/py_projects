@@ -1,7 +1,8 @@
 import requests
 
-url = "http://example.com"
+url = "https://imgs.xkcd.com/comics/python.png"
 
 r = requests.get(url)
 
-print(dir(r))
+with open('comic.png', 'wb') as f:
+    f.write(r.content)
