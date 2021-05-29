@@ -1,8 +1,11 @@
 import requests
 
-url = "https://imgs.xkcd.com/comics/python.png"
+payload = {'page': 2, 'count': 25}
+url = "https://httpbin.org/get"
 
-r = requests.get(url)
+r = requests.get(url, params=payload)
 
-with open('comic.png', 'wb') as f:
-    f.write(r.content)
+print(r.status_code)
+print(r.ok)
+print(r.headers)
+print(r.url)
